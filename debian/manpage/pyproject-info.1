@@ -1,0 +1,41 @@
+.TH pyproject-info "1" "Jan 2023" "pyproject-info" "Extract information from the given 'pyproject.toml'"
+.SH NAME
+\fBpyproject-info \fP- extract information from the given 'pyproject.toml' file
+\fB
+.SH USAGE
+pyproject-info [OPTIONS] [PROJECT]
+.SH DESCRIPTION
+Pyproject-info  extracts information from the given 'pyproject.toml' file
+and prints the JSON representation.
+.SH OPTIONS
+.TP
+.B
+\fB-r\fP, \fB--resolve\fP
+Resolve file key in project.readme and
+project.license (if present) to retrieve the
+content of the file.
+.TP
+.B
+\fB-i\fP, \fB--indent\fP INTEGER
+Add indentation to the JSON output.
+.TP
+.B
+\fB-f\fP, \fB--file\fP TEXT
+The ``pyproject.toml`` file.
+.TP
+.B
+\fB-P\fP, \fB--parser-class\fP TEXT
+The class to parse the 'pyproject.toml' file with.
+[default: pyproject_parser:PyProject]
+.TP
+.B
+\fB-T\fP, \fB--traceback\fP
+Show the complete traceback on error.
+.TP
+.B
+\fB-h\fP, \fB--help\fP
+Show the help message and exit.
+.SH AUTHORS
+Written by Dominic Davis-Foste <dominic@davis-foster.co.uk>
+.PP
+This manual page was written by Josenison F. da Silva <nilsonfsilva@hotmail.com>

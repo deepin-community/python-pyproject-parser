@@ -1,0 +1,4 @@
+debian/manpage/check-pyproject.1
+debian/manpage/pyproject-fmt.1
+debian/manpage/pyproject-info.1
+debian/manpage/pyproject-parser.1

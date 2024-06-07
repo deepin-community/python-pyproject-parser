@@ -1,0 +1,33 @@
+.TH pyproject-parser "1" "Jan 2023" "pyproject-parser" "Parser for 'pyproject.toml' file"
+.SH NAME
+\fBpyproject-parser \fP- "Parser for 'pyproject.toml' file"
+\fB
+.SH USAGE
+pyproject-parser [OPTIONS] COMMAND [ARGS]\.\.\.
+.SH DESCRIPTION
+Tool developed to parse the pyproject.toml file. In addition to the parsing
+library, pyproject-parser has a command-line interface for validating and
+reformatting pyproject.toml files.
+.SH OPTIONS
+.TP
+.B
+\fB-h\fP, \fB--help\fP
+Show the help message and exit.
+.SH COMMANDS
+.TP
+.B
+check
+Validate the given ``pyproject.toml`` file.
+.TP
+.B
+info
+Extracts information from the given ``pyproject.toml`` file and
+prints the JSON representation.
+.TP
+.B
+reformat
+Reformat the given ``pyproject.toml`` file.
+.SH AUTHORS
+Written by Dominic Davis-Foste <dominic@davis-foster.co.uk>
+.PP
+This manual page was written by Josenison F. da Silva <nilsonfsilva@hotmail.com>
