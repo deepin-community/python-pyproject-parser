@@ -1,0 +1,3 @@
+BadConfigError: Unknown key in '[build-system]': 'foo'
+    Use '--traceback' to view the full traceback.
+Aborted!

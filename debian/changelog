@@ -1,5 +1,43 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-pyproject-parser (0.11.1-2) unstable; urgency=medium
 
-  * Initial release
+  * Versioning Build-Depends to fix test regression
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Thu, 30 May 2024 21:11:11 -0300
+
+python-pyproject-parser (0.11.1-1) unstable; urgency=medium
+
+  * New upstream version 0.11.1
+  * debian/control: Removed Suite: autopkgtest-pybuild
+  * debian/tests/control: Replaced autopkgtest d/control with d/tests/control
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Tue, 21 May 2024 21:19:20 -0300
+
+python-pyproject-parser (0.11.0-2) unstable; urgency=medium
+
+  * debian/control:
+     - Added Build-Depends for testing
+     - Replaced autopkgtest from python to pybuild
+  * debian/rules:
+     - Enabled custom testing with pytest
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Mon, 20 May 2024 23:51:38 -0300
+
+python-pyproject-parser (0.11.0-1) unstable; urgency=medium
+
+  * New upstream version 0.11.0
+  * debian/watch: Added tag "opts"  to not track pre-versions
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sun, 28 Apr 2024 16:58:39 -0300
+
+python-pyproject-parser (0.9.1-2) unstable; urgency=medium
+
+  * Upload to unstable
+  * debian/rules: updated information disabling tests
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sat, 30 Dec 2023 00:10:27 -0300
+
+python-pyproject-parser (0.9.1-1) experimental; urgency=medium
+
+  * Initial release. (Closes: #1028151)
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Tue, 07 Nov 2023 19:39:50 -0300

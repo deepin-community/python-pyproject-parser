@@ -1,0 +1,6 @@
+dynamic: []
+name: spam
+readme:
+  content_type: text/markdown
+  file: README.md
+version: 2020.0.0

@@ -1,0 +1,39 @@
+.TH pyproject-fmt "1" "Jan 2023" "pyproject-fmt" "Reformat the given 'pyproject.toml' file"
+.SH NAME
+\fBpyproject-fmt \fP- Reformat the given 'pyproject.toml' file
+\fB
+.SH USAGE
+pyproject-fmt [OPTIONS] [PROJECT]
+.SH DESCRIPTION
+pyproject-fmt is designed to reformat the provided 'pyproject.toml' file
+file via the command line.
+.SH OPTIONS
+.TP
+.B
+\fB-E\fP, \fB--encoder-class\fP TEXT
+The class to encode the config to TOML with.  [default:
+pyproject_parser:PyProjectTomlEncoder]
+.TP
+.B
+\fB-d\fP, \fB--show-diff\fP
+Show a (coloured) diff of changes.
+.TP
+.B
+\fB--colour\fP / \fB--no-colour\fP
+Whether to use coloured output.
+.TP
+.B
+\fB-P\fP, \fB--parser-class\fP TEXT
+The class to parse the 'pyproject.toml' file with.  [default: pyproject_parser:PyProject]
+.TP
+.B
+\fB-T\fP, \fB--traceback\fP
+Show the complete traceback on error.
+.TP
+.B
+\fB-h\fP, \fB--help\fP
+Show the help message and exit.
+.SH AUTHORS
+Written by Dominic Davis-Foste <dominic@davis-foster.co.uk>
+.PP
+This manual page was written by Josenison F. da Silva <nilsonfsilva@hotmail.com>

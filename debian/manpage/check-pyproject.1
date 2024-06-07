@@ -1,0 +1,28 @@
+.TH check-pyproject "1" "Jan 2023" "check-pyproject" "Validate the given 'pyproject.tom' file"
+.SH NAME
+\fBcheck-pyproject \fP- Validate the given 'pyproject.toml' file
+\fB
+.SH USAGE
+check-pyproject [OPTIONS] [PROJECT]
+.SH DESCRIPTION
+check-pyproject is designed to check the validity of the 'pyproject.toml'
+file via the command line.
+.SH OPTIONS
+.TP
+.B
+\fB-P\fP, \fB--parser-class\fP TEXT
+The class to parse the 'pyproject.toml' file with.
+[default:
+pyproject_parser:PyProject]
+.TP
+.B
+\fB-T\fP, \fB--traceback\fP
+Show the complete traceback on error.
+.TP
+.B
+\fB-h\fP, \fB--help\fP
+Show the help message and exit.
+.SH AUTHORS
+Written by Dominic Davis-Foste <dominic@davis-foster.co.uk>
+.PP
+This manual page was written by Josenison F. da Silva <nilsonfsilva@hotmail.com>

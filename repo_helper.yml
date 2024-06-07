@@ -1,0 +1,102 @@
+# Configuration for 'repo_helper' (https://github.com/domdfcoding/repo_helper)
+---
+modname: 'pyproject-parser'
+copyright_years: '2021'
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'repo-helper'
+assignee: 'domdfcoding'
+primary_conda_channel: "domdfcoding"
+version: '0.11.1'
+license: 'MIT'
+short_desc: "Parser for 'pyproject.toml'"
+
+python_deploy_version: 3.8
+sphinx_html_theme: furo
+preserve_custom_theme: true
+tox_testenv_extras: readme,cli
+min_coverage: 97.5
+on_conda_forge: true
+
+mypy_plugins:
+ - attr_utils.mypy_plugin
+
+conda_channels:
+ - conda-forge
+
+# Versions to run tests for
+python_versions:
+ - '3.6'
+ - '3.7'
+ - '3.8'
+ - '3.9'
+ - "3.10"
+ - "3.11"
+ - "3.12"
+ - 3.13-dev
+ - pypy36
+ - pypy37
+ - pypy38
+ - pypy39
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - toml_spec_version = "0.5.0"
+ - needspace_amount = r"5\baselineskip"
+ - 'ignore_missing_xrefs = ["^toml\.(encoder\.)?TomlEncoder$"]'
+ - ''
+ - import pyproject_parser.utils
+ - import pyproject_parser.type_hints
+ - ''
+ - pyproject_parser.utils.__dict__["ContentTypes"] = pyproject_parser.type_hints.ContentTypes
+ - pyproject_parser.classes.__dict__["ContentTypes"] = pyproject_parser.type_hints.ContentTypes
+ - pyproject_parser.classes.__dict__["ReadmeDict"] = pyproject_parser.type_hints.ReadmeDict
+
+extra_sphinx_extensions:
+ - sphinx_click
+ - attr_utils.autoattrs
+ - sphinx_toolbox.pre_commit
+ - sphinx_toolbox.more_autosummary.column_widths
+ - sphinx_packaging.peps
+ - sphinx_packaging.toml
+ - sphinx_toolbox.latex.succinct_seealso
+ - sphinx_toolbox_experimental.missing_xref
+ - local_extension
+
+classifiers:
+ - 'Development Status :: 4 - Beta'
+ - 'Intended Audience :: Developers'
+ - 'Topic :: Software Development :: Libraries :: Python Modules'
+ - "Topic :: System :: Archiving :: Packaging"
+
+keywords:
+ - pep518
+ - pep621
+ - pyproject
+ - toml
+ - metadata
+ - packaging
+
+extras_require:
+ readme:
+  - readme-renderer[md]>=27.0
+  - docutils>=0.16
+ cli:
+  - consolekit>=1.4.1
+  - click>=7.1.2
+  - sdjson>=0.3.1
+
+console_scripts:
+ - pyproject-parser=pyproject_parser.__main__:main
+ - check-pyproject=pyproject_parser.__main__:check
+ - pyproject-fmt=pyproject_parser.__main__:reformat
+ - pyproject-info=pyproject_parser.__main__:info
+
+intersphinx_mapping:
+ - "'consolekit': ('https://consolekit.readthedocs.io/en/latest/', None)"
+
+exclude_files:
+ - contributing
+
+tox_unmanaged:
+ - coverage:report
